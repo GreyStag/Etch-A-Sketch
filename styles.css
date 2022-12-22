@@ -1,0 +1,40 @@
+body {
+   
+
+    background-color: black;
+}
+
+.mainPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+    width: 100px;
+    height: 200px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.sketchPad {
+    display: flex;
+  
+    height: 500px;
+    width:  500px;
+    background-color: aliceblue;
+}
