@@ -9,6 +9,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+
+    padding-top: 10%;
 }
 
 .options {
@@ -18,7 +20,8 @@ body {
     align-items: center;
     background-color: darkgray;
     width: 100px;
-    height: 200px;
+    height: 500px;
+    max-height: 500px;
 }
 
 button {
@@ -29,6 +32,19 @@ button {
     width: 80px;
     height: 40px;
     font-size: 16px;
+}
+
+#slider input{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+    width: 80px;
+}
+#sliderOutput {
+    display: flex;
+    justify-content: center;
+    width: 80px;
 }
 
 .sketchPad {
