@@ -4,6 +4,7 @@ const horizDiv = document.createElement('div');
 const vertDiv = document.createElement('div');
 
 
+
 slide.addEventListener('mouseup', e => {
     $('#sketchPad > div').remove()
     let firstVal = document.getElementById('sliderInput').value;
@@ -39,20 +40,28 @@ function sizingDivs(num){
         vertDiv.style.width = resize + "px";
         vertDiv.style.height = resize + "px";
 
+        horizDiv.classList.add('sketchDiv')
+        vertDiv.classList.add('sketchDiv')
+
         sketch.appendChild(vertDiv)
         sketch.appendChild(horizDiv)
     };
+    
+    colorIn()
+    
 }
 
-// function addingDivs(num){
-//     console.log(num)
-  
-//     for (i = 0; i < num; i++){
-//         horizDiv.appendChild(vertDiv)
-        
-//     };
-    
-//     for (i = 0; i < num; i++){
-//         sketch.appendChild(vertDiv)
-//     };
-// }
+function colorIn (){
+const coloringDiv = document.querySelectorAll('.sketchDiv');
+coloringDiv.forEach(sketchDiv => {
+    sketchDiv.addEventListener('click', function handleClick(event){
+        console.log('box clicked', event);
+        sketchDiv.style.backgroundColor = 'black';
+    })
+
+})
+}
+
+
+
+//     document.getElementsByClassName('sketchPad').style.backgroundColor = 'black';
