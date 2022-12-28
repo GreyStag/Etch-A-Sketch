@@ -2,7 +2,9 @@ const slide = document.getElementById('slider');
 const sketch = document.getElementById('sketchPad');
 const horizDiv = document.createElement('div');
 const vertDiv = document.createElement('div');
-
+const black = document.getElementById('black');
+const eraser = document.getElementById('eraser');
+const clear = document.getElementById('clear');
 
 
 slide.addEventListener('mouseup', e => {
@@ -52,15 +54,37 @@ function sizingDivs(num){
 }
 
 function colorIn (){
-const coloringDiv = document.querySelectorAll('.sketchDiv');
-coloringDiv.forEach(sketchDiv => {
-    sketchDiv.addEventListener('mouseenter', function handleClick(event){
-        // sketchDiv.onmouseenter = sketchDiv.style.backgroundColor = 'black';
-        console.log('box clicked', event);
-        sketchDiv.style.backgroundColor = 'black';
+
+    const coloringDiv = document.querySelectorAll('.sketchDiv');
+
+    black.addEventListener('click', e =>{
+        coloringDiv.forEach(sketchDiv => {
+            sketchDiv.addEventListener('mouseenter', function handleClick(event){
+                // sketchDiv.onmouseenter = sketchDiv.style.backgroundColor = 'black';
+                console.log('box clicked', event);
+                sketchDiv.style.backgroundColor = 'black';
+            })
+        
+        })
     })
 
-})
+    eraser.addEventListener('click', e =>{
+        coloringDiv.forEach(sketchDiv => {
+            sketchDiv.addEventListener('mouseenter', function handleClick(event){
+                // sketchDiv.onmouseenter = sketchDiv.style.backgroundColor = 'black';
+                console.log('box clicked', event);
+                sketchDiv.style.backgroundColor = 'white';
+            })
+        
+        })
+    })
+
+    clear.addEventListener('click', e => {
+        $('#sketchPad > div').remove()
+    })
+
+    
+    
 }
 
 
