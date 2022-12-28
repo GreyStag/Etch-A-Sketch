@@ -47,10 +47,23 @@ button {
     width: 80px;
 }
 
-.sketchPad {
+#sketchPad {
     display: flex;
-  
+    flex-wrap: wrap;
     height: 500px;
     width:  500px;
     background-color: aliceblue;
+}
+
+
+
+.horz {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+.altHorz {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
 }
