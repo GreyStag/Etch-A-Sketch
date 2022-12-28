@@ -54,7 +54,8 @@ function sizingDivs(num){
 function colorIn (){
 const coloringDiv = document.querySelectorAll('.sketchDiv');
 coloringDiv.forEach(sketchDiv => {
-    sketchDiv.addEventListener('click', function handleClick(event){
+    sketchDiv.addEventListener('mouseenter', function handleClick(event){
+        // sketchDiv.onmouseenter = sketchDiv.style.backgroundColor = 'black';
         console.log('box clicked', event);
         sketchDiv.style.backgroundColor = 'black';
     })
