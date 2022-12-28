@@ -5,7 +5,7 @@ const vertDiv = document.createElement('div');
 
 
 slide.addEventListener('mouseup', e => {
-    
+    $('#sketchPad > div').remove()
     let firstVal = document.getElementById('sliderInput').value;
     let slideVal = 0;
     if (firstVal % 2 != 0){
